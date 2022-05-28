@@ -127,10 +127,8 @@ class TaskController extends Controller
         $activity = Activity::find($id);
         $history = new ActivityHistory();
 
-        if($activity->task_name != $request->task_name) {
-            $history->prev_task_name = $activity->task_name;
-            $history->task_name = $request->task_name;
-        }
+        $history->prev_task_name = $activity->task_name;
+        $history->task_name = $request->task_name;
 
         $history->prev_task_description = $activity->task_description;
         $history->task_description = $request->task_description;
