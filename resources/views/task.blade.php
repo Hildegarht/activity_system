@@ -45,11 +45,12 @@
                             </div>
                         </div>
                         <div class="flex-1">
+                            {{ dd($history->assigned_to) }}
                             <div class="">
-                                <span>Previously Assigned to: <strong>{{  User::find($history->prev_assigned_to)->get() ?? "None" }}</strong></span>
+                                <span>Previously Assigned to: <strong>{{ ($history->prev_assigned_to() != null ? $history->prev_assigned_to()->name :  'None') }}</strong></span>
                             </div>
                             <div class="">
-                                <span>Assigned to: <strong>{{ User::find($history->assigned_to)->get() ?? "None" }}</strong></span>
+                                <span>Assigned to: <strong>{{ ($history->assigned_to() != null ? $history->assigned_to()->name : "None") }}</strong></span>
                             </div>
                         </div>
                     </div>
