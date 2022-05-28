@@ -46,10 +46,10 @@
                         </div>
                         <div class="flex-1">
                             <div class="">
-                                <span>Previously Assigned to: <strong>{{ (isset($history->prev_assigned_to) ? $history->prev_assigned_to->name :  'None') }}</strong></span>
+                                <span>Previously Assigned to: <strong>{{ (isset($history->prev_assigned_to()) ? $history->prev_assigned_to()->name :  'None') }}</strong></span>
                             </div>
                             <div class="">
-                                <span>Assigned to: <strong>{{ (isset($history->assigned_to) ? $history->assigned_to->name : "None") }}</strong></span>
+                                <span>Assigned to: <strong>{{ (isset($history->assigned_to()) ? $history->assigned_to()->name : "None") }}</strong></span>
                             </div>
                         </div>
                     </div>
