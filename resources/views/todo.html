@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Activity Tracker</title>
+	</head>
+	<body>
+		<section class="container-sidebar">
+			<div class="container-sidebar-header">
+				<div class="csh-setting">
+					<span
+						class="iconify"
+						data-icon="mi:settings"
+						data-width="25"
+						style="color: rgb(151, 149, 149)"
+					></span>
+				</div>
+				<div class="csh-close">
+					<span
+						class="iconify"
+						data-icon="mi:chevron-double-left"
+						style="color: rgba(97, 21, 210, 0.721)"
+						data-width="25"
+					></span>
+				</div>
+			</div>
+			<div class="container-sidebar-search">
+				<span
+					class="iconify"
+					data-icon="mi:search"
+					style="
+						color: #ccc;
+						left: 45px;
+						position: absolute;
+					"
+					data-width="17"
+				></span>
+				<input
+					type="search"
+					name=""
+					id=""
+					placeholder="Search"
+				/>
+			</div>
+			<div class="container-sidebar-sidebar">
+				<div class="css-one">
+					<span
+						class="iconify def-icon"
+						data-icon="mi:home"
+						style="color: #666; margin-top: -5px"
+						data-width="25"
+					></span>
+					<a href="index.html">Home</a>
+				</div>
+				<div class="css-one">
+					<span
+						class="iconify def-icon"
+						data-icon="mi:clipboard-list"
+						style="color: #666; margin-top: -5px"
+						data-width="25"
+					></span>
+					<a href="todo.html">To-Do</a>
+				</div>
+				<div class="css-one">
+					<span
+						class="iconify def-icon"
+						data-icon="mi:document-check"
+						style="color: #666; margin-top: -5px"
+						data-width="25"
+					></span>
+					<a href="done.html">Done</a>
+				</div>
+			</div>
+			<div class="container-sidebar-footer"></div>
+		</section>
+
+		<section class="container-body">
+                  <div class="container-body-header">
+                        <div class="container-body-header-left">
+                              <p>Activity Tracker</p>
+                        </div>
+                        <div class="container-body-header-right">
+                              <div class="profile">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/3011/3011270.png" alt="" srcset="">
+                              </div>
+                              <div class="profile-menu">
+
+                              </div>
+
+                        </div>
+                  </div>
+                  <div class="container-body-content">
+
+                        <p>TO DO</p>
+                        <div class="cbc-list">
+
+                              <a href="index.html">Home</a>
+                               <a href="todo.html" class="active"><span>To do</span></a>
+                              <a href="done.html">Done</a>
+                        </div>
+                        <div class="cbc-content">
+                              <div class="add-contents">
+                                    <div class="add-task">
+                                          <span class="iconify" data-icon="mi:add" style="color: #666; margin-right: 3px; margin-left: -5px;" data-width="17"></span>
+                                          <p>Task</p>
+                                    </div>
+                                    <div></div>
+                              </div>
+                               <p style="margin-top: 30px;">Active</p>
+                              <div class="cbc-overdue">
+                                    <p>No active tasks or reminders scheduled.</p>
+                              </div>
+                              <p style="margin-top: 30px;">Overdue</p>
+                              <div class="cbc-overdue">
+                                    <p>No overdue tasks or reminders scheduled.</p>
+                              </div>
+                              <p style="margin-top: 30px;">Next</p>
+                               <div class="cbc-next">
+                                    <p>No overdue tasks or reminders scheduled.</p>
+                              </div>
+                        </div>
+
+                  </div>
+            </section>
+
+		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+	</body>
+</html>

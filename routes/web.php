@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Activity;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/auth', function () {
+    return view('login');
 });
+
+
+Route::get('/', function () {
+    $activity = new Activity();
+    $activities = $activity->all();
+
+    return view('index', [
+        "activities" => $activities
+    ]);
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
