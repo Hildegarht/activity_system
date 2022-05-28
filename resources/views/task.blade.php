@@ -64,10 +64,10 @@
                         </div>
                         <div class="flex-3" style="padding-left: 40px">
                             <div>
-                                <span>Previous Description: <strong>{{ $history->task_description }}</strong></span>
+                                <span>Previous Description: <strong>{{ $history->prev_task_description }}</strong></span>
                             </div>
                             <div class="">
-                                <span>Description: <strong>{{ $activity->prev_task_description }}</strong></span>
+                                <span>Description: <strong>{{ $activity->task_description }}</strong></span>
                             </div>
                         </div>
                     </div>
