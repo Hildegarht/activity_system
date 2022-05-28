@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="flex-1">
-                            {{ dd($history->assigned_to()) }}
+                            {{ dd($history->user }}
                             <div class="">
                                 <span>Previously Assigned to: <strong>{{ ($history->prev_assigned_to() != null ? $history->prev_assigned_to()->name :  'None') }}</strong></span>
                             </div>
