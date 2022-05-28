@@ -32,7 +32,7 @@
         <div class="cbc-content rounded-md">
 
             @foreach ($activity->history as $history)
-                <div style="background-color: #f8fafc" class="rounded-md border py-4 px-4 my-2">
+                <div style="background-color: #f8fafc; margin-top: 12px" class="rounded-md border py-4 px-4">
                     <h2 style="margin-left: 8px; font-size: 18px">Date Updated: <strong><em>{{ date_format($history->created_at, "Y-m-d") }}</em></strong></h2>
                     <hr style="margin: 8px 0">
                     <div class="flex">
