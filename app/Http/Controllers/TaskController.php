@@ -133,8 +133,8 @@ class TaskController extends Controller
         $history->prev_task_description = $activity->task_description;
         $history->task_description = $request->task_description;
 
-        $history->prev_task_assignee = $activity->user_id;
-        $history->task_assignee = $request->task_assignee;
+        $history->prev_assigned_to = $activity->user_id;
+        $history->assigned_to = $request->task_assignee;
 
         $history->prev_task_status = $activity->task_status;
         $history->task_status = $request->task_status;
