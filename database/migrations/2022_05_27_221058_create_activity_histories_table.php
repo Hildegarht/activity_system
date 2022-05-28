@@ -17,8 +17,6 @@ return new class extends Migration
     {
         Schema::create('activity_histories', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('prev_assigned_to')->nullable();
-            $table->unsignedBigInteger('assigned_to')->nullable();
 
             $table->foreignIdFor(User::class);
             $table->foreignIdFor(Activity::class);
@@ -29,8 +27,8 @@ return new class extends Migration
             $table->string("prev_task_description")->nullable();
             $table->string("task_description")->nullable();
 
-            $table->foreign('prev_assigned_to')->references('id')->on('users');
-            $table->foreign('assigned_to')->references('id')->on('users');
+            $table->foreignId('prev_assigned_to')->constrained("users");
+            $table->foreignId('assigned_to')->constrained("users");
 
             $table->string("prev_task_status")->nullable()->default("Pending");
             $table->string("task_status")->nullable()->default("Pending");

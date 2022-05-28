@@ -13,12 +13,16 @@ class ActivityHistory extends Model
         return $this->hasOne(User::class, "id", "user_id");
     }
 
-    public function assigned_to() {
-        return $this->belongsTo(User::class, "id", "assigned_to");
+    public function assigned_user() {
+        return $this->hasOne(User::class, "id", "assigned_to");
     }
 
-    public function prev_assigned_to() {
-        return $this->belongsTo(User::class, "id", "prev_assigned_to");
+    public function prev_assigned_user() {
+        return $this->hasOne(User::class, "id", "assigned_to");
     }
+
+    // public function prev_assigned_to() {
+    //     return $this->hasOne(User::class);
+    // }
 
 }

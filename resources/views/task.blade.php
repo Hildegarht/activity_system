@@ -45,17 +45,16 @@
                             </div>
                         </div>
                         <div class="flex-1">
-                            {{ dd($history->user }}
                             <div class="">
-                                <span>Previously Assigned to: <strong>{{ ($history->prev_assigned_to() != null ? $history->prev_assigned_to()->name :  'None') }}</strong></span>
+                                <span>Previously Assigned to: <strong>{{ ($history->prev_assigned_user != null ? $history->prev_assigned_user->name :  'None') }}</strong></span>
                             </div>
                             <div class="">
-                                <span>Assigned to: <strong>{{ ($history->assigned_to() != null ? $history->assigned_to()->name : "None") }}</strong></span>
+                                <span>Assigned to: <strong>{{ ($history->assigned_user != null ? $history->assigned_user->name : "None") }}</strong></span>
                             </div>
                         </div>
                     </div>
                     <div class="flex mt-4">
-                        <div class="flex-1">
+                        <div class="flex-2">
                             <div class="">
                                 <span>Previously Status: <strong>{{ $history->prev_task_status }}</strong></span>
                             </div>
@@ -63,14 +62,14 @@
                                 <span>Status: <strong>{{ $history->task_status }}</strong></span>
                             </div>
                         </div>
-                        {{-- <div class="flex-1">
-                            <div class="">
-                                <span>Previously Assigned to: <strong>{{ $activity->user->name }}</strong></span>
+                        <div class="flex-3" style="padding-left: 40px">
+                            <div>
+                                <span>Previous Description: <strong>{{ $history->task_description }}</strong></span>
                             </div>
                             <div class="">
-                                <span>Assigned to: <strong>{{ $activity->user->name }}</strong></span>
+                                <span>Description: <strong>{{ $activity->prev_task_description }}</strong></span>
                             </div>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
             @endforeach
