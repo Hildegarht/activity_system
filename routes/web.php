@@ -28,4 +28,13 @@ Route::get('/', function () {
     ]);
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/index', function () {
+    $activity = new Activity();
+    $activities = $activity->all();
+
+    return view('index', [
+        "activities" => $activities
+    ]);
+})->middleware(['auth'])->name('index');
+
 require __DIR__.'/auth.php';
