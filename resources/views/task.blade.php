@@ -33,7 +33,7 @@
 
             @foreach ($activity->history as $history)
                 <div style="background-color: #f8fafc" class="rounded-md border py-4 px-4">
-                    <h2 style="margin-left: 8px; font-size: 18px">Date Updated: <strong><em>12-21-2002</em></strong></h2>
+                    <h2 style="margin-left: 8px; font-size: 18px">Date Updated: <strong><em>{{ date_format($history->created_at, "Y-m-d") }}</em></strong></h2>
                     <hr style="margin: 8px 0">
                     <div class="flex">
                         <div class="flex-1">
@@ -41,7 +41,7 @@
                                 <span>Previously Task Name: <strong>{{ $history->prev_task_name }}</strong></span>
                             </div>
                             <div class="">
-                                <span>Task Name: <strong>{{ $activity->task_name }}</strong></span>
+                                <span>Task Name: <strong>{{ $history->task_name }}</strong></span>
                             </div>
                         </div>
                         <div class="flex-1">
